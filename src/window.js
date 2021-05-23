@@ -21,7 +21,7 @@ const { GObject, Gtk } = imports.gi;
 var PlanoWindow = GObject.registerClass({
     GTypeName: 'PlanoWindow',
     Template: 'resource:///com/github/diegoivanme/plano/window.ui',
-    InternalChildren: ['label']
+    InternalChildren: ['addFileButton']
 }, class PlanoWindow extends Gtk.ApplicationWindow {
     _init(application) {
         super._init({ application });
