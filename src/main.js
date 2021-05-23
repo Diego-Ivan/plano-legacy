@@ -40,6 +40,10 @@ function main(argv) {
             activeWindow = new PlanoWindow(app);
         }
 
+		activeWindow._addFileButton.connect ('clicked', () => {
+			log ("Que rollo con el pollo");
+		});
+
         activeWindow.present();
     });
 
