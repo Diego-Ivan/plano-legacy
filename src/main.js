@@ -26,18 +26,17 @@ pkg.require({
 const { Gio, Gtk } = imports.gi;
 
 const { PlanoWindow } = imports.window;
+const { PlanoApplication } = imports.application;
+
 
 function main(argv) {
-    const application = new Gtk.Application({
-        application_id: 'com.github.diegoivanme.plano',
-        flags: Gio.ApplicationFlags.FLAGS_NONE,
-    });
+    const application = new PlanoApplication ();
 
     application.connect('activate', app => {
         let activeWindow = app.activeWindow;
         
         if (!activeWindow) {
-            activeWindow = new PlanoWindow(app);
+            activeWindow = new PlanoWindow(application);
         }
         activeWindow.present();
     });
