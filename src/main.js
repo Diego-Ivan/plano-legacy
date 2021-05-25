@@ -19,7 +19,7 @@
 pkg.initGettext();
 pkg.initFormat();
 pkg.require({
-  'Gio': '2.0',
+  'Gio': '2.68',
   'Gtk': '3.0'
 });
 
@@ -39,11 +39,6 @@ function main(argv) {
         if (!activeWindow) {
             activeWindow = new PlanoWindow(app);
         }
-
-		activeWindow._addFileButton.connect ('clicked', () => {
-			log ("Que rollo con el pollo");
-		});
-
         activeWindow.present();
     });
 
