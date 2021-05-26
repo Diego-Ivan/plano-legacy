@@ -19,7 +19,7 @@
 pkg.initGettext();
 pkg.initFormat();
 pkg.require({
-  'Gio': '2.68',
+  'Gio': '2.0',
   'Gtk': '3.0'
 });
 
@@ -38,6 +38,7 @@ function main(argv) {
         if (!activeWindow) {
             activeWindow = new PlanoWindow(application);
         }
+
         activeWindow.present();
     });
 
