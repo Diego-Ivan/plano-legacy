@@ -55,13 +55,16 @@ var PlanoWindow = GObject.registerClass({
         	let sumX, sumY;
         	let slope;
         	
-        	sumX = this._coordX1.value + this._coordX2.value;
-        	sumY = this._coordY1.value + this._coordY2.value;
+        	sumX = this._coordX2.value - this._coordX1.value;
+        	sumY = this._coordY2.value - this._coordY1.value;
         	slope = sumY/sumX;
-        	this._resultsSlope.text = `${sumY}/${sumX}`;
-        	log (slope);
         	
-        	if (slope)
+        	if (slope === 1) {
+        		this._resultsSlope.text = slope;
+        	}
+        	else {
+        		this._resultsSlope.text = `${sumY}/${sumX}`;
+        	}
         	
         	sumX /=2;
         	sumY/=2;
