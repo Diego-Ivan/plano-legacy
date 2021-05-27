@@ -27,16 +27,16 @@
     <property name="page-increment">10</property>
   </object>
   <object class="GtkEntryBuffer" id="x1Buffer">
-    <property name="text" translatable="yes">0</property>
+    <property name="text" translatable="yes">0.00</property>
   </object>
   <object class="GtkEntryBuffer" id="x2Buffer">
-    <property name="text" translatable="yes">0</property>
+    <property name="text" translatable="yes">0.00</property>
   </object>
   <object class="GtkEntryBuffer" id="y1Buffer">
-    <property name="text" translatable="yes">0</property>
+    <property name="text" translatable="yes">0.00</property>
   </object>
   <object class="GtkEntryBuffer" id="y2Buffer">
-    <property name="text" translatable="yes">0</property>
+    <property name="text" translatable="yes">0.00</property>
   </object>
   <template class="PlanoWindow" parent="GtkApplicationWindow">
     <property name="can-focus">False</property>
@@ -84,6 +84,7 @@
                     <property name="buffer">x1Buffer</property>
                     <property name="input-purpose">number</property>
                     <property name="adjustment">adjustment1</property>
+                    <property name="digits">2</property>
                     <property name="numeric">True</property>
                   </object>
                   <packing>
@@ -111,6 +112,7 @@
                     <property name="buffer">x2Buffer</property>
                     <property name="input-purpose">number</property>
                     <property name="adjustment">adjustment3</property>
+                    <property name="digits">2</property>
                     <property name="numeric">True</property>
                   </object>
                   <packing>
@@ -154,6 +156,7 @@
                     <property name="buffer">y1Buffer</property>
                     <property name="input-purpose">number</property>
                     <property name="adjustment">adjustment2</property>
+                    <property name="digits">2</property>
                     <property name="numeric">True</property>
                   </object>
                   <packing>
@@ -181,6 +184,7 @@
                     <property name="buffer">y2Buffer</property>
                     <property name="input-purpose">number</property>
                     <property name="adjustment">adjustment4</property>
+                    <property name="digits">2</property>
                     <property name="numeric">True</property>
                   </object>
                   <packing>

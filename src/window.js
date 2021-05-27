@@ -17,6 +17,7 @@
  */
 
 const { GObject, Gtk } = imports.gi;
+    
 
 var PlanoWindow = GObject.registerClass({
     GTypeName: 'PlanoWindow',
@@ -56,24 +57,31 @@ var PlanoWindow = GObject.registerClass({
         	
         	sumX = this._coordX1.value + this._coordX2.value;
         	sumY = this._coordY1.value + this._coordY2.value;
-        	slope = sumX/sumY;
-        	this._resultsSlope.text = `${sumX}/${sumY}`;
+        	slope = sumY/sumX;
+        	this._resultsSlope.text = `${sumY}/${sumX}`;
+        	log (slope);
+        	
+        	if (slope)
         	
         	sumX /=2;
         	sumY/=2;
-        	this._resultsMidpoint.text = `(${sumX},${sumY})`;
+        	this._resultsMidpoint.text = `(${sumX}, ${sumY})`;
+        	this._calculateFormula (slope);
         });
     }
     
     _calculateFormula (slope) {
     	let x = this._coordX1.value;
     	let y = this._coordY1.value;
-    	let intercept = y - (x * slope);
+    	let intercept = Math.trunc (y - (x * slope));
+    	let divisor = Math.trunc (y/y);
+    	let truncedSlope = slope.toFixed (3);
     	
     	if (y/y !== 1) {
-    		this._resultsFormula = `y = ${slope}x/ ${y/y} + ${intercept}/${y/y}`;
+    		this._resultsFormula.text = `y = ${truncedSlope}x/ ${divisor} + ${intercept}/${y/y}`;
     		return;
     	}
+    	this._resultsFormula.text = `y = ${truncedSlope}x + ${intercept}`;
     }
 });
 
