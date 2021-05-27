@@ -1,0 +1,4 @@
+[Application]
+name=com.github.diegoivanme.plano
+runtime=org.gnome.Sdk/x86_64/40
+sdk=org.gnome.Platform/x86_64/40

@@ -21,9 +21,42 @@ const { GObject, Gtk } = imports.gi;
 var PlanoWindow = GObject.registerClass({
     GTypeName: 'PlanoWindow',
     Template: 'resource:///com/github/diegoivanme/plano/window.ui',
+    InternalChildren: [
+    	'coordX1',
+    	'coordY1',
+    	'coordX2',
+    	'coordY2',
+    	'resultsSlope',
+    	'resultsFormula',
+    	'resultsMidpoint',
+    	'clearButton',
+    	'calculateResults'
+    ]
 }, class PlanoWindow extends Gtk.ApplicationWindow {
     _init(application) {
         super._init({ application });
+        
+        const allSpinButtons = [
+        	this._coordX1,
+        	this._coordY1,
+        	this._coordX2,
+        	this._coordY2
+        ]
+        
+	    // clear the EntryBuffer
+        this._clearButton.connect ('clicked', () => {
+        	allSpinButtons.forEach (spinButton => {
+        		spinButton.set_value (0);
+        	});
+        });
+        
+        this._calculateResults.connect ('clicked', () => {
+        	this._verifyEntry (allSpinButtons);
+        });
+    }
+    
+    _verifyEntry (spinButton) {
+    	
     }
 });
 
