@@ -51,12 +51,29 @@ var PlanoWindow = GObject.registerClass({
         });
         
         this._calculateResults.connect ('clicked', () => {
-        	this._verifyEntry (allSpinButtons);
+        	let sumX, sumY;
+        	let slope;
+        	
+        	sumX = this._coordX1.value + this._coordX2.value;
+        	sumY = this._coordY1.value + this._coordY2.value;
+        	slope = sumX/sumY;
+        	this._resultsSlope.text = `${sumX}/${sumY}`;
+        	
+        	sumX /=2;
+        	sumY/=2;
+        	this._resultsMidpoint.text = `(${sumX},${sumY})`;
         });
     }
     
-    _verifyEntry (spinButton) {
+    _calculateFormula (slope) {
+    	let x = this._coordX1.value;
+    	let y = this._coordY1.value;
+    	let intercept = y - (x * slope);
     	
+    	if (y/y !== 1) {
+    		this._resultsFormula = `y = ${slope}x/ ${y/y} + ${intercept}/${y/y}`;
+    		return;
+    	}
     }
 });
 
