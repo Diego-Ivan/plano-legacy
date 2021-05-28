@@ -102,7 +102,7 @@ var PlanoWindow = GObject.registerClass({
     		this._resultsFormula.text = `y = ${truncedSlope}x/ ${divisor} + ${intercept}/${y/y}`;
     		return;
     	}
-    	this._resultsFormula.text = `y = ${truncedSlope}x + ${intercept}`;
+    	this._resultsFormula.text = `y = ${slope}x + ${intercept}`;
     }
     
     _valuesGreaterThanZero (coordinates) {
