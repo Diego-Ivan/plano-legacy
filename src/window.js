@@ -62,8 +62,9 @@ var PlanoWindow = GObject.registerClass({
         		entry.text = "";
         	});
         });
+        
         this._calculateResults.connect ('clicked', () => {
-        	if (this._valuesGreaterThanZero ()) {
+        	if (this._valuesGreaterThanZero (allSpinButtons)) {
         		let sumX, sumY;
 		    	let slope;
 		    	
@@ -74,6 +75,7 @@ var PlanoWindow = GObject.registerClass({
 		    	this._resultsSlope.text = `${sumY}/${sumX}`;
 		    	log ("calculos completados");
 		    	
+		    	// this divides both the sum of x and y by two to get the midpoint
 		    	sumX /=2;
 		    	sumY/=2;
 		    	this._resultsMidpoint.text = `(${sumX}, ${sumY})`;
@@ -100,27 +102,17 @@ var PlanoWindow = GObject.registerClass({
     		this._resultsFormula.text = `y = ${truncedSlope}x/ ${divisor} + ${intercept}/${y/y}`;
     		return;
     	}
-    	this._resultsFormula.text = `y = ${truncedSlope}x + ${intercept}`;
+    	this._resultsFormula.text = `y = ${slope}x + ${intercept}`;
     }
     
-    _valuesGreaterThanZero () {
-    	let counter = 0;
-    	let coordinatesOne = [
-    		this._coordX1,
-    		this._coordY1
-    	];
-    	let coordinatesTwo = [
-    		this._coordX2,
-    		this._coordY2
-    	];
-    	
-    	coordinatesOne.forEach (coordinates => {
+    _valuesGreaterThanZero (coordinates) {
+    	let filledSpins = 4;	
+    	coordinates.forEach (coordinates => {
     		if (coordinates.value === 0) {
-    			counter++;
-    			log (counter);
+    			filledSpins--;
     		}
     	});
-    	if (counter === 2) return false;
+    	if (filledSpins <= 1) return false;
     	return true;
     }
 });
