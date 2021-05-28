@@ -29,7 +29,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/diegoivan/Proyectos/plano"
+                    "url" : "https://github.com/DiegoIvanME/plano"
                 }
             ]
         }
