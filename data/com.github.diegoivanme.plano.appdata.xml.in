@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>io.github.diegoivanme.plano.desktop</id>
+	<id>com.github.diegoivanme.plano.desktop</id>
   <pkgname>plano</pkgname>
   <name>Plano</name>
   <summary>Calculator for Cartesian Plane</summary>
