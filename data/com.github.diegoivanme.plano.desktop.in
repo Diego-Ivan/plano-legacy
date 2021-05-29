@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=plano
-Exec=com.github.diegoivanme.plano
-Icon=com.github.diegoivanme.plano
+Exec=io.github.diegoivanme.plano
+Icon=io.github.diegoivanme.plano
 Terminal=false
 Type=Application
 Categories=Education;
