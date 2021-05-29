@@ -13,4 +13,14 @@
 	<description>
 	  Simple Cartesian Plane Calcultor I made for my math class
 	</description>
+  <releases>
+    <release date="2021-05-29" version="0.5">
+      <description>
+        <p>
+          Welcome to Plano! A GTK application I made for school to calculate
+          Various Cartesian Plane elements. This is my first GTK Application!
+        </p>
+      </description>
+    </release>
+  </releases>
 </component>
