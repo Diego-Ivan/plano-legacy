@@ -1,22 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>com.github.diegoivanme.plano.desktop</id>
-  <pkgname>plano</pkgname>
+  <id>com.github.diegoivanme.plano</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
   <name>Plano</name>
-  <summary>Calculator for Cartesian Plane</summary>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  Simple Cartesian Plane Calcultor I made for my math class
-	</description>
+  <summary>Simple cartesian plane calculator</summary>
+
+  <description>
+    <p>
+      Utility to calculate different cartesian plane elements. My first GTK application
+    </p>
+  </description>
+
   <releases>
-    <release date="2021-05-29" version="0.5">
+    <release date="2021-05-03" version="40.0">
       <description>
         <p>
-          Welcome to Plano! A GTK application I made for school to calculate
-          Various Cartesian Plane elements. This is my first GTK Application!
+          This is my first GTK application! I have just used something I knew that could
+          allow me to code my first GTK app, the code is porblanly not the cleanest, I'm
+          still newbie, but it works. Any improvement or feedback is welcomed
         </p>
       </description>
     </release>
   </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
 </component>
